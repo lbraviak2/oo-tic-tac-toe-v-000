@@ -10,15 +10,19 @@ class TicTacToe
     puts "-----------"
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
-
+  
 WIN_COMBINATIONS = [
   [0,1,2], [3,4,5],[6,7,8],[0,4,8], [2,4,6], [0,3,6], [1,4,7], [2,5,8]
 ]
 
+def input_to_index
+  @user_input
+  @user_input.to_i - 1
+end
   def won?
     combo = []
     board.all? { |e| e == " " || e == ""}
-
+  
     if @board[0] == @board[1] && @board[0] === @board[2] && (@board[0] == "X" || @board[0] == "O")
       true
       combo = WIN_COMBINATIONS[0]
@@ -46,6 +50,6 @@ WIN_COMBINATIONS = [
     else
       false
     end
-
+  
   end
 end
