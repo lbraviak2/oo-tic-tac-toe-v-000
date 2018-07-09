@@ -100,7 +100,7 @@ class TicTacToe
     false
   end
 
-end
+  end
 
 
 
