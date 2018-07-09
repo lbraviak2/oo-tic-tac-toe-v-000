@@ -21,7 +21,7 @@ class TicTacToe
 
   def turn_count
     counter = 0
-    board.each do |item|
+    @board.each do |item|
       if item.downcase == "x" || item.downcase == "o"
         counter = counter + 1
       end
