@@ -23,3 +23,4 @@ class TicTacToe
     player = current_player(@board)
     @board[index] = player
   end
+end
