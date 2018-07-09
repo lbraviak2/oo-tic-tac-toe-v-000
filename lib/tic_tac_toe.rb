@@ -110,13 +110,13 @@ class TicTacToe
       true
     end
   end
-  
+
   def draw?
     if full? == true && won? == false
       true
     end
   end
-  
+
   def over?
     if draw? == true && won? == false
       true
@@ -126,27 +126,27 @@ class TicTacToe
       true
     end
   end
-  
+
   # Define your play method below
   def play
     until over? == true
       input = turn
     end
-  
+
     if won? != false
       puts "Congratulations #{winner(board)}!"
     else
       puts "Cat's Game!"
     end
   end
-  
+
   def winner
     if won? != false
       combo = 100
       combo = won?
       position = Integer(combo[0])
       winna = String(@board[position])
-  
+
       if winna == "X"
         "X"
       elsif winna == "O"
@@ -155,7 +155,7 @@ class TicTacToe
     else
       nil
     end
-  
+
   end
 
 
