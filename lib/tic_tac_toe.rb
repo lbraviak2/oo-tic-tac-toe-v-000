@@ -19,6 +19,24 @@ class TicTacToe
     user_input.to_i - 1
   end
 
+  def turn_count
+    counter = 0
+    board.each do |item|
+      if item.downcase == "x" || item.downcase == "o"
+        counter = counter + 1
+      end
+    end
+    counter
+  end
+
+  def current_player(@board)
+    if turn_count(@board) % 2 == 0
+      "X"
+    else
+      "O"
+    end
+  end
+
   def move(index, player)
     player = current_player(@board)
     @board[index] = player
