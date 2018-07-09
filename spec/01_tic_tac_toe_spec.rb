@@ -143,7 +143,7 @@ describe './lib/tic_tac_toe.rb' do
         board = ["O", " ", " ", " ", "X", " ", " ", " ", " "]
         game.instance_variable_set(:@board, board)
 
-        expect(game.current_player).to eq("O")
+        expect(game.current_player).to eq("X")
       end
 
       it 'returns the correct player, O, for the fourth move' do
