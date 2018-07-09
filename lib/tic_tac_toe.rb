@@ -62,10 +62,9 @@ class TicTacToe
     end
   end
 
-  def move(index, player)
+  def move(input_to_index, player)
     player = current_player
-    puts player
-    @board[index] = player
+    @board[input_to_index] = player
   end
 
   def won?
