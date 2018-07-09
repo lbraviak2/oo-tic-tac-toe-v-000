@@ -10,11 +10,11 @@ class TicTacToe
     puts "-----------"
     puts " #{@board[6]} | #{@board[7]} | #{@board[8]} "
   end
-  
+
   def won?
     combo = []
     board.all? { |e| e == " " || e == ""}
-  
+
     if @board[0] == @board[1] && @board[0] === @board[2] && (@board[0] == "X" || @board[0] == "O")
       true
       combo = WIN_COMBINATIONS[0]
@@ -42,6 +42,6 @@ class TicTacToe
     else
       false
     end
-  
+
   end
 end
